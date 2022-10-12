@@ -60,7 +60,7 @@ def index():
         symbol = database["symbol"]
         current = lookup(symbol.upper())
         database["total"] = "{:.2f}".format(database["shares"] * current["price"])
-        prices = database["price"] = current["price"]
+        prices = current["price"]
         total += database["shares"] * current["price"]
 
     return render_template("index.html", databases=databases, cash=round(cash, 2), total=total, totals=round(total), prices=prices)
