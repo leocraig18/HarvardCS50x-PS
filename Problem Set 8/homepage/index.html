@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Eclipse Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="" class="logo">
+                {logo}
+            </a>
+            <nav class="center desktop">
+                <a href="">Blog</a>
+                <a href="automation.html">Projects</a>
+                <a href="fitness.html">Fitness</a>
+                <a href="">Mindfulness</a>
+            </nav>
+            <nav class="right">
+                <a href="" id="menuBtn">Menu</a>
+            </nav>
+        </header>
+        <div class="backdrop"></div>
+        <aside>
+            <button class="close">&times;</button>
+            <a href="mind.html">Morning Mantra</a>
+            <a href="">Blog</a>
+            <a href="automation.html">Projects</a>
+            <a href="fitness.html">Fitness</a>
+            <a href="">Contact Me</a>
+            <a href="">Account</a>
+        </aside>
+        <div class="scroll-container">
+        <section>
+            <div class="content"><h1>Mind</h1>
+            <p>Develop your <a href="mind.html">Morning Mantra</a></p>
+            <div class="buttons">
+                <a href="">iOS</a>
+                <a href="">About</a>
+            </div>
+            </div>
+        </section>
+        <section>
+            <div class="content"><h1>Automation</h1>
+            <p><a href="automation.html">Eclipse Automation</a></p>
+            <div class="buttons">
+                <a href="">iOS</a>
+                <a href="">About</a>
+            </div>
+            </div>
+        </section>
+        <section>
+            <div class="content"><h1>Fitness</h1>
+            <p>Browse my <a href="">Fitness Programmes</a></p>
+            <div class="buttons">
+                <a href="">iOS</a>
+                <a href="">About</a>
+            </div>
+            </div>
+        </section>
+        <section>
+            <div class="content"><h1>Blog</h1>
+            <p><a href="">Blog Entries</a></p>
+            <div class="buttons">
+                <a href="">iOS</a>
+                <a href="">About</a>
+            </div>
+            </div>
+        </section>
+        </div>
+        <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0);">
+              <b>© 2022 Copyright:</b>
+              <a class="text-light" href=>eclipse.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <script>
+            {
+                const openMenu = () => {
+                document.querySelector('.backdrop').className = 'backdrop active';
+                document.querySelector('aside').className = 'active';
+                }
+
+                const closeMenu = () => {
+                document.querySelector('.backdrop').className = 'backdrop';
+                document.querySelector('aside').className = '';
+                }
+                document.getElementById('menuBtn').onclick = e => {
+                e.preventDefault();
+                openMenu();
+                }
+                document.querySelector('aside button.close').onclick = e => {
+                    closeMenu();
+                }
+                document.querySelector('.backdrop').onclick = e => {
+                    closeMenu();
+                }
+            }
+        </script>
+    </body>
+</html
